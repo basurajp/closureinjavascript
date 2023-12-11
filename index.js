@@ -1,12 +1,20 @@
-// Create a function that returns another function, and the returned function should be a counter. It should increment and return the count each time it's called.
+// Private Variables:
+// Implement a function that creates an object with a private variable. Provide methods to access and modify the private variable.
 
-function createCounter() {
-  let count = 0;
-  return function () {
-    return count++;
+function personname(name) {
+  let privateNanme = name;
+  return {
+    getname: function () {
+      return privateNanme;
+    },
+    setName: function (newName) {
+      return (privateNanme = newName);
+    },
   };
 }
 
-let counter = createCounter();
-console.log(counter());
-console.log(counter());
+
+let findPrivateName = personname('basuraj')
+
+console.log(findPrivateName.getname())
+console.log(findPrivateName.setName('pooja'))
