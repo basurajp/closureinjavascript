@@ -1,20 +1,12 @@
-// Private Variables:
-// Implement a function that creates an object with a private variable. Provide methods to access and modify the private variable.
-
-function personname(name) {
-  let privateNanme = name;
-  return {
-    getname: function () {
-      return privateNanme;
-    },
-    setName: function (newName) {
-      return (privateNanme = newName);
-    },
-  };
-}
+// Problem 1: Swapping Elements
+// Write a Javascript function swapElements(array) that uses array destructuring to swap the first and second elements of an array.
 
 
-let findPrivateName = personname('basuraj')
+let swapElements = (arr) => {
+ [arr[0], arr[1]] = [arr[1], arr[0]];
+return arr
+};
 
-console.log(findPrivateName.getname())
-console.log(findPrivateName.setName('pooja'))
+
+let arr = [1, 2, 3, 5];
+console.log(swapElements(arr));
